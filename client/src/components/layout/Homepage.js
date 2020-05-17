@@ -28,6 +28,7 @@ class Homepage extends Component{
     render(){
         const { errors } = this.state;
         return(
+            <div className="container">
             <div className="row"> {/* Parent div with row classname*/}
                 <div className="row" style={{height:"30px"}}> {/* Row 1 with height 30px and occupying the whole column, No text*/}
                     <div className="col s12"></div>
@@ -182,6 +183,9 @@ class Homepage extends Component{
                 </div>
 
             </div>
+
+            </div>
+            
         );  
     }
 }
