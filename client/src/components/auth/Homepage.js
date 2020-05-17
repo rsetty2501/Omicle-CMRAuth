@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Homepage extends Component{
     constructor(props){
@@ -8,7 +8,7 @@ class Homepage extends Component{
             email:"",
             password:"",
             errors:""
-        }
+        };
     }
 
     onChange = (event) => {
@@ -43,7 +43,7 @@ class Homepage extends Component{
                     <div className="col s1 l3"></div> {/* Part 1*/}
 
                     <div className="col s10 l6"> {/* Part 2*/}
-                        <div classname="z-depth-2" style={{width:"100%",height:"600px",border:"1px solid #bdbdbd"}}>
+                        <div className="z-depth-2" style={{width:"100%",height:"600px",border:"1px solid #bdbdbd"}}>
                             <br/>
                             {/* Sign in text*/}
                             <div style={{fontFamily:"Serif",fontSize:"30px",color:"#37474f"}}>
@@ -56,30 +56,30 @@ class Homepage extends Component{
                             {/* Google or Facebook Sign in button*/}
                             <div className="row">
                                 <div className="col s12 l6"> {/* Google Sign in*/}
-                                    <BrowserRouter>
+                                    
                                         <Link to="/google" style={{width: "83%",
                                             height:"35px",
                                             borderRadius: "2px",
                                             letterSpacing: "1.5px",
                                             marginBottom: "6px"}} 
                                             className="btn waves-effect waves-light hoverable blue-grey lighten-3">
-                                            <i class="fa fa-google fa-fw"></i> 
+                                            <i className="fa fa-google fa-fw"></i> 
                                             Sign in
                                         </Link> {/* Margin bottom added to create a gap when the screen gets small between the 2 buttons*/}
-                                    </BrowserRouter>
+                                    
                                 </div>
                                 
                                 <div className="col s12 l6"> {/* Facebook Sign in*/}
-                                    <BrowserRouter>
+                                    
                                         <Link to="/facebook" style={{width: "83%",
                                             height:"35px",
                                             borderRadius: "2px",
                                             letterSpacing: "1.5px"}} 
                                             className="btn waves-effect waves-light hoverable blue-grey lighten-3">
-                                            <i class="fa fa-facebook fa-fw"></i>
+                                            <i className="fa fa-facebook fa-fw"></i>
                                             Sign in
                                         </Link>
-                                    </BrowserRouter>
+                                    
                                 </div>
                             </div>
 
@@ -111,7 +111,7 @@ class Homepage extends Component{
                                         onChange={this.onChange}
                                         error={errors.email}
                                     />
-                                    <label for="email">Email</label>
+                                    <label htmlFor="email">Email</label>
                                 </div>
                                 <div className="input-field col s12" style={{width: "95%", marginLeft:"3%"}}>
                                     <input 
@@ -119,9 +119,9 @@ class Homepage extends Component{
                                         id="password"
                                         value={this.state.password}
                                         onChange={this.onChange}
-                                        error={errors.email}
+                                        error={errors.password}
                                     />
-                                    <label for="password">Password</label>
+                                    <label htmlFor="password">Password</label>
                                 </div>
                                 <div className="input-field col s12">
                                     <button
@@ -137,12 +137,12 @@ class Homepage extends Component{
                             </form>
 
                             {/* Forgot password?*/}
-                            <div classname="col s12" style={{textAlign:"left", marginLeft:"4%"}}>
-                                <BrowserRouter>
+                            <div className="col s12" style={{textAlign:"left", marginLeft:"4%"}}>
+                                
                                     <Link to="/forgotPswd" style={{color:"#455a64"}}>
                                         Forgot password?
                                     </Link>
-                                </BrowserRouter>
+                                
 
                             </div>
 
@@ -166,13 +166,13 @@ class Homepage extends Component{
                             </div>
 
                             {/* Link to register*/}
-                            <div classname="col s12" style={{textAlign:"left", marginLeft:"4%",color:"#455a64"}}>
+                            <div className="col s12" style={{textAlign:"left", marginLeft:"4%",color:"#455a64"}}>
                                 New to Omicle? 
-                                <BrowserRouter>
+                                
                                     <Link to="/register" style={{color:"#263238"}}>
                                      Join now
                                     </Link>
-                                </BrowserRouter>
+                                
 
                             </div>
 

@@ -8,7 +8,7 @@ class Navbar extends Component{
                 <nav className="z-depth-3">  {/* Creating a shadow below the bar */}
                     <div className="nav-wrapper white">
                         <BrowserRouter>
-                        <Link to="/" style={{fontFamily: "monospace"}} className="col s12 brand-logo center black-text">
+                        <Link to="/" style={{fontFamily: "monospace", color:"#37474f"}} className="col s12 brand-logo center">
                             Omicle
                         </Link>
                         </BrowserRouter>
