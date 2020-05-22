@@ -22,7 +22,7 @@
  };
 
  // Login - Get user token
- export const registerUser = (userData) => dispatch => {
+ export const loginUser = (userData) => dispatch => {
      axios
      .post("/api/users/login", userData)
      .then(res => {

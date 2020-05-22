@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types'
+import { loginUser } from '../../actions/authActions';
+import { connect } from 'react-redux'; {/* connects between component and the store */}
+import classnames from "classnames";
 
 class Homepage extends Component{
     constructor(props){
@@ -9,6 +13,18 @@ class Homepage extends Component{
             password:"",
             errors:""
         };
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps.auth.isAuthenticated){
+            this.props.history.push("/LogisticCMR"); // On successful login, push user to CMR form page
+        }
+
+        if(nextProps.errors){
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
     }
 
     onChange = (event) => {
@@ -22,7 +38,8 @@ class Homepage extends Component{
             email : this.state.email,
             password : this.state.password
         };
-        console.log(userData);
+        
+        this.props.loginUser(userData);
     };
 
     render(){
@@ -106,8 +123,12 @@ class Homepage extends Component{
                                         value={this.state.email}
                                         onChange={this.onChange}
                                         error={errors.email}
+                                        className= {classnames("", {
+                                                    invalid: errors.email || errors.emailnotfound
+                                            })}
                                     />
                                     <label htmlFor="email">Email</label>
+                                    <span className="red-text">{errors.email} {errors.emailnotfound}</span>
                                 </div>
                                 <div className="input-field col s12" style={{width: "95%", marginLeft:"3%"}}>
                                     <input 
@@ -116,8 +137,12 @@ class Homepage extends Component{
                                         value={this.state.password}
                                         onChange={this.onChange}
                                         error={errors.password}
+                                        className= {classnames("", {
+                                                    invalid: errors.password || errors.passwordincorrect
+                                            })}
                                     />
                                     <label htmlFor="password">Password</label>
+                                    <span className="red-text">{errors.password} {errors.passwordincorrect}</span>
                                 </div>
                                 <div className="input-field col s12">
                                     <button
@@ -180,4 +205,15 @@ class Homepage extends Component{
     }
 }
 
-export default Homepage;
+Homepage.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    auth: state.auth,
+    errors: state.errors
+});
+
+export default connect(mapStateToProps, { loginUser }) (Homepage);
