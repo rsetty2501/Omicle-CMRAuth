@@ -56,30 +56,26 @@ class Homepage extends Component{
                             {/* Google or Facebook Sign in button*/}
                             <div className="row">
                                 <div className="col s12 l6"> {/* Google Sign in*/}
-                                    
-                                        <Link to="/google" style={{width: "83%",
-                                            height:"35px",
-                                            borderRadius: "2px",
-                                            letterSpacing: "1.5px",
-                                            marginBottom: "6px"}} 
-                                            className="btn waves-effect waves-light hoverable blue-grey lighten-3">
-                                            <i className="fa fa-google fa-fw"></i> 
-                                            Sign in
-                                        </Link> {/* Margin bottom added to create a gap when the screen gets small between the 2 buttons*/}
-                                    
+                                    <Link to="/google" style={{width: "83%",
+                                        height:"35px",
+                                        borderRadius: "2px",
+                                        letterSpacing: "1.5px",
+                                        marginBottom: "6px"}} 
+                                        className="btn waves-effect waves-light hoverable blue-grey lighten-3">
+                                        <i className="fa fa-google fa-fw"></i> 
+                                        Sign in
+                                    </Link> {/* Margin bottom added to create a gap when the screen gets small between the 2 buttons*/}
                                 </div>
                                 
                                 <div className="col s12 l6"> {/* Facebook Sign in*/}
-                                    
-                                        <Link to="/facebook" style={{width: "83%",
-                                            height:"35px",
-                                            borderRadius: "2px",
-                                            letterSpacing: "1.5px"}} 
-                                            className="btn waves-effect waves-light hoverable blue-grey lighten-3">
-                                            <i className="fa fa-facebook fa-fw"></i>
-                                            Sign in
-                                        </Link>
-                                    
+                                    <Link to="/facebook" style={{width: "83%",
+                                        height:"35px",
+                                        borderRadius: "2px",
+                                        letterSpacing: "1.5px"}} 
+                                        className="btn waves-effect waves-light hoverable blue-grey lighten-3">
+                                        <i className="fa fa-facebook fa-fw"></i>
+                                        Sign in
+                                    </Link>
                                 </div>
                             </div>
 
@@ -138,12 +134,9 @@ class Homepage extends Component{
 
                             {/* Forgot password?*/}
                             <div className="col s12" style={{textAlign:"left", marginLeft:"4%"}}>
-                                
-                                    <Link to="/forgotPswd" style={{color:"#455a64"}}>
-                                        Forgot password?
-                                    </Link>
-                                
-
+                                <Link to="/forgotPswd" style={{color:"#455a64"}}>
+                                    Forgot password?
+                                </Link>
                             </div>
 
                             <br/>
@@ -168,12 +161,9 @@ class Homepage extends Component{
                             {/* Link to register*/}
                             <div className="col s12" style={{textAlign:"left", marginLeft:"4%",color:"#455a64"}}>
                                 New to Omicle? 
-                                
-                                    <Link to="/register" style={{color:"#263238"}}>
-                                     Join now
-                                    </Link>
-                                
-
+                                <Link to="/register" style={{color:"#263238"}}>
+                                    Join now
+                                </Link>
                             </div>
 
                         </div>
