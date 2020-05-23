@@ -1,9 +1,10 @@
+import classnames from "classnames";
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from 'prop-types'
 import { registerUser } from '../../actions/authActions';
 import { connect } from 'react-redux'; {/* connects between component and the store */}
-import classnames from "classnames";
+
 
 
 class Register extends Component{
@@ -19,6 +20,12 @@ class Register extends Component{
         };
     }
 
+    componentWillMount(){
+        if(this.props.auth.isAuthenticated){
+            this.props.history.push("/LogisticCMR");
+        }
+    }
+    
     componentWillReceiveProps(nextProps){
         if(nextProps.errors) {
             this.setState({

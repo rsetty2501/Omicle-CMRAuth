@@ -1,9 +1,10 @@
+import classnames from "classnames";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
 import { loginUser } from '../../actions/authActions';
 import { connect } from 'react-redux'; {/* connects between component and the store */}
-import classnames from "classnames";
+
 
 class Homepage extends Component{
     constructor(props){
@@ -13,6 +14,12 @@ class Homepage extends Component{
             password:"",
             errors:""
         };
+    }
+
+    componentWillMount(){
+        if(this.props.auth.isAuthenticated){
+            this.props.history.push("/LogisticCMR");
+        }
     }
 
     componentWillReceiveProps(nextProps){

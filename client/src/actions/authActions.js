@@ -18,7 +18,7 @@
             type: GET_ERRORS,
             payload : err.response.data
         })
-        );
+    );
  };
 
  // Login - Get user token
@@ -37,7 +37,7 @@
             type: GET_ERRORS,
             payload : err.response.data
         })
-        );
+    );
  };
 
  // Set logged in user
