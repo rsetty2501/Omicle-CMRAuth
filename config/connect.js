@@ -13,7 +13,7 @@ async function run() {
         console.log("Connected correctly to server");
 
     } catch (err) {
-        console.log(err.stack);
+        console.log("Error!!!!!!!: " + err.stack);
     }
     finally {
         await client.close();

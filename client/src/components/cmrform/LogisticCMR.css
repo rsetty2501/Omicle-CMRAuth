@@ -1,0 +1,42 @@
+
+/* This is the first part of the table*/
+#headerTable {
+    border: 1px solid black;
+    background-color: black;
+    width: 100%;
+  }
+
+  #headerTabData {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    text-align: left; 
+    font-size: 8px;
+    color: white;
+    font-family: Arial;
+  }
+
+  /* This decides the overall height of both the row*/
+  #headerTabRow {
+      line-height: 10px;
+  }
+
+  #tabData{
+    border : 1px solid black;
+    width: 95%;
+    margin-left: 2%; /* Make sure to adjust the table in the center (margin-left and margin-right)*/
+    margin-right: auto;
+    margin-top: -2px; /* Move the table a bit up so that the border overlaps with the previous table*/
+  }
+
+  /* This is the second part of the table*/
+  .tabHeader1, .tabHeader2 {
+    border : 1px solid black;
+    line-height: 70px;
+  }
+  .tabHeader1 {
+    width: 55%;
+ }
+  .tabHeader2 {
+    width: 45%;
+  }

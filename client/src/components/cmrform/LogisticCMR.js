@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import './LogisticCMR.css';
 import PropTypes from 'prop-types'
 import { logoutUser } from '../../actions/authActions';
 import { connect } from 'react-redux'; {/* connects between component and the store */}
+
+
 
 class LogisticCMR extends Component {
 
@@ -16,16 +19,43 @@ class LogisticCMR extends Component {
         const { user } = this.props.auth;
 
         return (
-            <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
-            <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+        <div className="container">
+
+          <div classname="row" style={{height:"35px"}}>
+            <div classname="col s12" ></div>
+          </div>
+
+          {/* 1. This is the Header of the form */}
+          <table id="headerTable">
+            <tr id="headerTabRow">
+              <th rowspan="2" style={{width:"20px",
+                                    fontSize:"25px",
+                                    paddingLeft:"5px",
+                                    paddingBottom:"1px",
+                                    paddingTop: "1px",
+                                    textAlign: "left",
+                                    color: "#ffffff"}}>1</th>
+              <td id="headerTabData">Exemplar fur den Absender</td>
+            </tr>
+            <tr id="headerTabRow">
+              <td id="headerTabData">Copy for admin</td>
+            </tr>
+          </table>
+
+          {/* 2. Actual data of the form */}
+          <table id="tabData">
+            <tr>
+              <th class="tabHeader1"> <p>
+                Absendersad
+                <br/> dasdas
               </p>
-            </h4>
+              
+              </th>
+              <th class="tabHeader2">Exemplar fur den Absender</th>
+            </tr>
+          </table>
+
+
             <button
               style={{
                 width: "150px",
@@ -38,9 +68,9 @@ class LogisticCMR extends Component {
             >
               Logout
             </button>
-          </div>
+          
+          
         </div>
-      </div>
         );
     }
 }

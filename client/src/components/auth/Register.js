@@ -57,7 +57,7 @@ class Register extends Component{
         return(
             <div className="container">
                 <div className="row"> {/* Parent div with row classname*/}
-                    <div className="row" style={{height:"30px"}}> {/* Row 1 with height 30px and occupying the whole column, No text*/}
+                    <div className="row" style={{height:"30px"}}> {/* Row 1 with height 30px and occupying the whole row, No text*/}
                         <div className="col s12"></div>
                     </div>
 
@@ -155,7 +155,7 @@ class Register extends Component{
                                 <div style={{fontFamily:"Serif",fontSize:"20px",color:"#37474f"}}>
                                     <p>
                                         Already have an account? 
-                                        <Link to="/">
+                                        <Link to="/login">
                                             Login
                                         </Link>
                                     </p>

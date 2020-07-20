@@ -7,8 +7,8 @@ class Navbar extends Component{
             <div className="navbar-fixed">
                 <nav className="z-depth-3">  {/* Creating a shadow below the bar */}
                     <div className="nav-wrapper white">
-                        <Link to="/" style={{fontFamily: "monospace", color:"#37474f"}} className="col s12 brand-logo center">
-                            Omicle
+                        <Link to="/login" style={{fontFamily: "monospace", color:"#37474f"}} className="col s12 brand-logo center">
+                        Omicle
                         </Link>
                     </div>
                 </nav>
@@ -16,5 +16,7 @@ class Navbar extends Component{
         );  
     }
 }
+
+
 
 export default Navbar;

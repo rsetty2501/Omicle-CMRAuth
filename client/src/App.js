@@ -40,7 +40,7 @@ class App extends Component {
           <div className="App">
             <Navbar />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/" component={Homepage} />
+            <Route exact path="/login" component={Homepage} />
             <Switch>
               <PrivateRoute exact path="/LogisticCMR" component={LogisticCMR} />
             </Switch>
